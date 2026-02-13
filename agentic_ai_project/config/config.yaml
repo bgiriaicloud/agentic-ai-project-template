@@ -1,0 +1,14 @@
+llm:
+  provider: "google"
+  model: "gemini-1.5-pro-latest"
+  api_key_env_var: "GOOGLE_API_KEY"
+  temperature: 0.7
+  max_output_tokens: 8192
+
+agent:
+  memory_path: "data/memory/short_term/session.json"
+  tools_path: "data/tools/tools_config.json"
+  max_recursion_depth: 5
+
+observability:
+  log_level: "INFO"

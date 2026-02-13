@@ -1,0 +1,11 @@
+google-generativeai
+python-dotenv
+pyyaml
+pydantic
+pandas
+numpy
+structlog
+opentelemetry-api
+opentelemetry-sdk
+fastapi
+uvicorn

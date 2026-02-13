@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agentic-ai-deployment
+  labels:
+    app: agentic-ai
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agentic-ai
+  template:
+    metadata:
+      labels:
+        app: agentic-ai
+    spec:
+      containers:
+      - name: agentic-ai
+        image: gcr.io/YOUR_PROJECT_ID/agentic-ai-app:latest  # REPLACE WITH YOUR IMAGE
+        ports:
+        - containerPort: 8080
+        env:
+        - name: GOOGLE_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: agentic-ai-secrets
+              key: google-api-key
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"

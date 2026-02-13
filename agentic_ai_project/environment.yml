@@ -1,0 +1,17 @@
+name: agentic_ai_project
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - google-generativeai
+    - python-dotenv
+    - pyyaml
+    - pydantic
+    - pandas
+    - numpy
+    - structlog
+    - opentelemetry-api
+    - opentelemetry-sdk

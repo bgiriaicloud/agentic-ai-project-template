@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+.venv
+env/
+venv/
+*.env
+
+# IDE
+.vscode/
+.idea/
+
+# Data
+data/memory/short_term/*
+!data/memory/short_term/.gitkeep
+data/logging/*
+!data/logging/.gitkeep
